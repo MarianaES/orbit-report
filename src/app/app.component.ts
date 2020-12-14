@@ -18,8 +18,7 @@ export class AppComponent {
     window.fetch(satelliteUrl).then(function(response) {
         response.json().then(function(data) {
         let fetchedSatellites = data.satellites;
-        // console.log(fetchedSatellites);
-        fetchedSatellites.forEach(satellite => {this.sourceList.push(satellite)})
+        fetchedSatellites.forEach(satellite => {this.sourceList.push(new Satellite(satellite.name, satellite.type, satellite.operational, satellite.orbitType, satellite.launchDate))});
       }.bind(this));
     }.bind(this));
   }

@@ -16,4 +16,5 @@ export class Satellite {
     shouldShowWarning(): boolean {
         return (this.type === 'Space Debris');
     }
+    
 }

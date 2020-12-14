@@ -32,3 +32,7 @@ th, td {
 .data:hover {
   background-color: #557ba3;
 }
+
+tbody tr:nth-child(even) {
+  background-color: #2f4f70;
+}
